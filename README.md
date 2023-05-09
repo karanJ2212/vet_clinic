@@ -9,20 +9,19 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
-  - [Install](#install)
+
   - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
+ 
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
+
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -60,17 +59,6 @@ Animals table that consists of details of each animals eg. Name, DoB, etc.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-N/A
-
-
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -82,61 +70,30 @@ In order to run this project you need: Install Postgres SQL
 ### Prerequisites
 
 In order to run this project you need:
-Postgresql
+
+A working POSTGRESQL installation
 
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
 ```sh
-  git clone https://github.com/karanjain2212/vet-clinic.git
-  cd Vet-clinic
+  cd my-folder
+  git clone git@github.com:karanjain2212/vet_clinic.git
 ```
 --->
-
 
 
 ### Usage
 
-To run the project, execute the following command:
+To run the project:
+- Launch the postgresql shell
+- Connect to an already existing database or create a new one
+- Run the commands in the `schema.sql` file to create the tables
+- Run the commands in the `data.sql` file to populate the tables with data
+- Run the commands in the `queries.sql` file to query the database
 
-<!--
-  psql -u postgres
-
-```sh
-  rails server
-```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-NA
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-render.com
-
-
-```sh
-
-```
- -->
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
