@@ -83,16 +83,36 @@ In order to run this project you need: Install Postgres SQL
 
 In order to run this project you need:
 
-- A working POSTGRESQL installation
+<!--
+Example command:
+
+```sh
+ gem install rails
+```
+ -->
 
 ### Setup
 
 Clone this repository to your desired folder:
 
 ```sh
-cd my-folder
-git clone https://github.com/karanjain2212/vet_clinic.git
+  cd my-folder
+  git clone git@github.com:myaccount/my-project.git
 ```
+--->
+
+### Install
+
+Install this project with:
+
+<!--
+Example command:
+
+```sh
+  cd my-project
+  gem install
+```
+--->
 
 ### Usage
 
@@ -103,18 +123,38 @@ To run the project:
 - Run the commands in the `data.sql` file to populate the tables with data
 - Run the commands in the `queries.sql` file to query the database
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!--
+Example command:
+
+```sh
+  rails server
+```
+--->
+
+### Run tests
 
 
 <!--
 Example commands:
 
 ```sh
-  git clone https://github.com/karanjain2212/vet-clinic.git
-  cd Vet-clinic
+  bin/rails test test/models/article_test.rb
 ```
 --->
 
+### Deployment
+
+You can deploy this project using:
+
+<!--
+Example:
+
+```sh
+
+```
+ -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
