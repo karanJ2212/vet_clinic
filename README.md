@@ -60,13 +60,6 @@ Animals table that consists of details of each animals eg. Name, DoB, etc.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-N/A
-
-
-
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
