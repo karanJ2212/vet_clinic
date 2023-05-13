@@ -123,3 +123,11 @@ GROUP BY o.full_name
 ORDER BY COUNT(*) DESC
 LIMIT 1;
 
+SELECT a.name AS animal_name
+FROM animals AS a
+INNER JOIN visits AS v ON a.id = v.animal_id
+WHERE v.vet_id = (SELECT id FROM vets WHERE name = 'William Tatcher')
+ORDER BY v.visit_date DESC
+LIMIT 1;
+--
+
