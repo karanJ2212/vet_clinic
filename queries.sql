@@ -123,3 +123,65 @@ GROUP BY o.full_name
 ORDER BY COUNT(*) DESC
 LIMIT 1;
 
+SELECT a.name AS animal_name
+FROM animals AS a
+INNER JOIN visits AS v ON a.id = v.animal_id
+WHERE v.vet_id = (SELECT id FROM vets WHERE name = 'William Tatcher')
+ORDER BY v.visit_date DESC
+LIMIT 1;
+--
+SELECT COUNT(DISTINCT v.animal_id) AS animal_count
+FROM visits AS v
+WHERE v.vet_id = (SELECT id FROM vets WHERE name = 'Stephanie Mendez');
+--
+SELECT v.name AS vet_name, s.name AS specialty_name
+FROM vets AS v
+LEFT JOIN specializations AS sp ON v.id = sp.vet_id
+LEFT JOIN species AS s ON sp.species_id = s.id;
+--
+SELECT a.name AS animal_name
+FROM animals AS a
+INNER JOIN visits AS v ON a.id = v.animal_id
+INNER JOIN vets AS ve ON v.vet_id = ve.id
+WHERE ve.name = 'Stephanie Mendez'
+  AND v.visit_date >= DATE '2020-04-01'
+  AND v.visit_date <= DATE '2020-08-30';
+
+--
+SELECT a.name AS animal_name, COUNT(*) AS visit_count
+FROM animals AS a
+INNER JOIN visits AS v ON a.id = v.animal_id
+GROUP BY a.name
+ORDER BY visit_count DESC
+LIMIT 1;
+
+--
+SELECT a.name AS animal_name
+FROM animals AS a
+INNER JOIN visits AS v ON a.id = v.animal_id
+INNER JOIN vets AS ve ON v.vet_id = ve.id
+WHERE ve.name = 'Maisy Smith'
+ORDER BY v.visit_date ASC
+LIMIT 1;
+--
+SELECT a.name AS animal_name, v.visit_date, ve.name AS vet_name, ve.age AS vet_age
+FROM animals AS a
+INNER JOIN visits AS v ON a.id = v.animal_id
+INNER JOIN vets AS ve ON v.vet_id = ve.id
+ORDER BY v.visit_date DESC
+LIMIT 1;
+
+--
+SELECT COUNT(*) AS mismatched_visits
+FROM visits AS v
+INNER JOIN animals AS a ON v.animal_id = a.id
+INNER JOIN vets AS ve ON v.vet_id = ve.id
+LEFT JOIN specializations AS sp ON ve.id = sp.vet_id AND a.species_id = sp.species_id
+WHERE sp.vet_id IS NULL;
+--
+select v.name as vet_name , s.name as specie_name, count(*) as total_visits from vets as v 
+inner join visits on v.id = visits.vet_id
+inner join animals as a on a.id= visits.animal_id inner join  species as s 
+on a.species_id = s.id  where v.name =  'Maisy Smith' group by vet_name,s.name 
+ORDER BY total_visits DESC
+
