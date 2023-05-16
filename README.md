@@ -40,8 +40,6 @@ PostgreSQL
 
 
 
-
-
 <details>
 <summary>Database</summary>
   <ul>
@@ -64,6 +62,9 @@ Animals table that consists of details of each animals eg. Name, DoB, etc.
 ## 💻 Getting Started <a name="getting-started"></a>
 
 In order to run this project you need: Install Postgres SQL
+Follow the below schema
+
+![vet_clinic](https://github.com/karanJ2212/vet_clinic/assets/107232162/87871555-c758-4a62-aecb-89e50452c8ca)
 
 
 
